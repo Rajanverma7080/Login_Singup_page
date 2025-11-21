@@ -7,49 +7,63 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main class="card" aria-labelledby="login-title">
+    <main class="main" aria-labelledby="login-title">
         <header>
             <h1 id="login-title">Welcome back</h1>
       <p>Sign in to access smart, personalized travel plans made for you.</p>
         </header>
-    </main>
-    
-    <!-- put all inputs inside form -->
+
+         <!-- put all inputs inside form -->
     <form id="loginForm" novalidate autocomplete="on" action="#" method="post">
+
+        <div id="form-msg" aria-live="polite"></div>
             
         <div>
         
             <label for="email">Email address*</label>
-            <input type="email" name="email" id="email" placeholder="example@gmail.com" required >
+            <input type="email" name="email" id="email" placeholder="example@gmail.com" required autocomplete="email" inputmode="email" >
         </div>
                         
         <div>
             
             <label for="pass">Password*</label>
         <div style="position:relative">
-            <input type="password" name="password" type="password" placeholder="Enter your password" minlength="8">
-        <button type="button" id="togglePw" class="btn-ghost"
+            <input type="password" name="password" type="password" placeholder="Enter your password" minlength="8"autocomplete="email">
+            <button type="button" id="togglePw" class="btn-ghost"
                   style="position:absolute;right:6px;top:6px" aria-label="Show password">Show</button>
-            
-        <br>
-            
-            <input type="checkbox" required>
-            <label for="remember">Remember me</label>
-            <a href="Forget_password.html" >Forget Password</a><br><br>
-            <button>Sign in</button><br>
-            <p>or continue with</p><br>
-            <button>Google</button>
-            <button>Apple</button>
-            <!-- <button>GitHub</button> -->
-            <br>
-            <div>
-                <p>Don't have an account?</p>
-                <a href="signup.html">Sing up</a>
-            </div>
+        </div>
+        <div class="muted" style="margin-top:6px;font-size:.85rem">
+          Use at least 8 characters.(use small alphabet, capital alphabet & symbal.)
+        </div>
+        <div class="row"            style="justify-content:space-between;">
+        <label style="display:flex;align-items:center;gap:8px">
+          <input id="remember" name="remember" type="checkbox" />
+          <span class="muted">Remember me</span>
+        </label>
+        <a href="forgot-password.html" class="muted">Forgot password?</a>
+      </div>
+
+        <div class="actions">
+        <div></div>
+        <button type="submit" class="primary">Sign in</button>
+      </div>
+
+      <div>
+        <p class="muted">or continue with</p>
+        <div class="alt-auth">
+          <button type="button" class="btn-ghost" aria-label="Sign in with Google">Google</button>
+          <button type="button" class="btn-ghost" aria-label="Sign in with Apple">Apple</button>
+        </div>
 
         </div>
 
+      <div style="text-align:center;margin-top:14px">
+        <p class="muted">Don't have an account? <a href="signup.html">Sign up</a></p>
+      </div>
+
     </form>
+
+    </main>
 
 
 </body>
