@@ -7,41 +7,49 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <main class="card" aria-labelledby="login-title">
+        <header>
+            <h1 id="login-title">Welcome back</h1>
+      <p>Sign in to access smart, personalized travel plans made for you.</p>
+        </header>
+    </main>
     
-    <div id="center_page">
-
+    <!-- put all inputs inside form -->
+    <form id="loginForm" novalidate autocomplete="on" action="#" method="post">
+            
         <div>
-            <h1 align="center">Welcome Back</h1>
-            <h4 id="text">Sign in to access samrt,personalized travel plans made for you.</h4>
-        </div>
-        <br>
-        <div align="center">
+        
             <label for="email">Email address*</label>
-        <br>
-            <input type="email" name="email" id="email" placeholder="example@gmail.com" required><br>
-        
-            <label for="pass">Password*</label><br>
-            <input type="password" name="password" id="pass" placeholder="@Sn123hsn#" 
+            <input type="email" name="email" id="email" placeholder="example@gmail.com" required >
         </div>
-        <br>
-        
-        <input type="checkbox" required>
-        <label for="remember">Remember me</label>
-        <a href="Forget_password.html" >Forget Password</a><br><br>
-        <button>Sign in</button><br>
-        <p>or continue with</p><br>
-        <button>Google</button>
-        <button>Apple</button>
-        <!-- <button>GitHub</button> -->
-        <br>
+                        
         <div>
-            <p>Don't have an account?</p>
-            <a href="signup.html">Sing up</a>
+            
+            <label for="pass">Password*</label>
+        <div style="position:relative">
+            <input type="password" name="password" type="password" placeholder="Enter your password" minlength="8">
+        <button type="button" id="togglePw" class="btn-ghost"
+                  style="position:absolute;right:6px;top:6px" aria-label="Show password">Show</button>
+            
+        <br>
+            
+            <input type="checkbox" required>
+            <label for="remember">Remember me</label>
+            <a href="Forget_password.html" >Forget Password</a><br><br>
+            <button>Sign in</button><br>
+            <p>or continue with</p><br>
+            <button>Google</button>
+            <button>Apple</button>
+            <!-- <button>GitHub</button> -->
+            <br>
+            <div>
+                <p>Don't have an account?</p>
+                <a href="signup.html">Sing up</a>
+            </div>
+
         </div>
 
-    </div>
-    
-
+    </form>
 
 
 </body>
